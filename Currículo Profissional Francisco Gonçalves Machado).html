@@ -4,23 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Currículo de Francisco Gonçalves Machado, desenvolvedor de software com foco em Java e Spring Boot."
-    >
-
-    <title>Francisco Gonçalves Machado | Currículo</title>
+    <title>Francisco Gonçalves Machado | Desenvolvedor de Software</title>
 
     <style>
-        :root {
-            --azul: #1f4e79;
-            --azul-claro: #d6e0e8;
-            --texto: #292936;
-            --cinza: #666666;
-            --fundo: #f2f4f7;
-            --branco: #ffffff;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -28,218 +14,193 @@
         }
 
         body {
-            background: var(--fundo);
-            color: var(--texto);
+            background: #f3f5f7;
+            color: #20242a;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.55;
         }
 
         .curriculo {
-            width: min(100% - 32px, 1120px);
-            margin: 32px auto;
-            padding: 48px 56px;
-            background: var(--branco);
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            width: min(100%, 1000px);
+            margin: 30px auto;
+            padding: 42px 55px;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
 
         .cabecalho {
-            padding-bottom: 28px;
             text-align: center;
-            border-bottom: 2px solid var(--azul);
+            padding-bottom: 22px;
+            border-bottom: 2px solid #15549a;
         }
 
         .cabecalho h1 {
-            color: var(--azul);
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.15;
-            text-transform: uppercase;
+            color: #15549a;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.25rem;
             letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
         .cabecalho h2 {
-            margin-top: 12px;
-            color: var(--azul);
-            font-size: 1.2rem;
-            text-transform: uppercase;
+            color: #15549a;
+            font-size: 0.95rem;
+            letter-spacing: 0.4px;
+            margin-bottom: 12px;
+        }
+
+        .cabecalho h2 span,
+        .competencias span {
+            color: #777;
+            margin: 0 5px;
         }
 
         .contato,
         .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 14px;
+            font-size: 0.82rem;
+            margin-top: 3px;
         }
 
-        .contato {
-            color: var(--cinza);
-        }
-
-        .contato a,
-        .links a {
-            color: var(--azul);
+        a {
+            color: inherit;
             text-decoration: none;
         }
 
+        .links a,
+        .contato a {
+            color: #15549a;
+        }
+
+        .links a:hover,
         .contato a:hover,
-        .links a:hover {
+        .certificado-link:hover {
             text-decoration: underline;
         }
 
-        .links {
-            gap: 20px;
+        section {
+            margin-top: 22px;
         }
 
-        .secao {
-            margin-top: 26px;
-        }
-
-        .secao > h2 {
-            padding-bottom: 6px;
-            color: var(--azul);
-            font-size: 1.15rem;
-            text-transform: uppercase;
-            border-bottom: 2px solid var(--azul-claro);
-        }
-
-        .secao p {
-            margin-top: 12px;
-            font-size: 1rem;
-        }
-
-        .item,
-        .projeto {
-            margin-top: 14px;
-        }
-
-        .item h3,
-        .projeto h3,
-        .colunas h3,
-        .idiomas h3,
-        .curso h3 {
-            color: var(--texto);
-            font-size: 1rem;
-        }
-
-        .item p,
-        .projeto p {
-            margin-top: 4px;
-        }
-
-        .item span,
-        .idiomas span,
-        .curso-info span {
-            color: var(--cinza);
+        section h3 {
+            color: #15549a;
             font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid #c9d5e2;
+            padding-bottom: 4px;
+            margin-bottom: 9px;
+        }
+
+        section p {
+            font-size: 0.92rem;
+            margin-bottom: 9px;
+        }
+
+        small {
+            color: #666;
+            font-size: 0.8rem;
         }
 
         .colunas {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            margin-top: 14px;
+            gap: 55px;
+        }
+
+        .colunas h4 {
+            color: #15549a;
+            font-size: 0.88rem;
+            margin-bottom: 4px;
         }
 
         ul {
-            margin-top: 8px;
-            padding-left: 22px;
+            padding-left: 20px;
         }
 
         li {
-            margin-bottom: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
         }
 
         .idiomas {
             display: flex;
-            gap: 72px;
-            margin-top: 14px;
+            gap: 80px;
+        }
+
+        .idiomas div {
+            display: flex;
+            flex-direction: column;
         }
 
         .curso {
             display: flex;
             align-items: center;
-            gap: 24px;
-            margin-top: 16px;
+            gap: 20px;
+            margin-top: 10px;
         }
 
-        .certificado {
-            width: 310px;
-            flex-shrink: 0;
-        }
-
-        .certificado img {
+        .curso img {
+            width: 300px;
+            max-width: 100%;
+            border: 1px solid #c8c8c8;
+            border-radius: 5px;
             display: block;
-            width: 100%;
-            height: auto;
-            border: 1px solid #cccccc;
-            border-radius: 6px;
+            transition: transform 0.2s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .curso img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
         }
 
         .curso-info {
             flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .curso-info strong {
+            display: block;
+            margin-bottom: 4px;
         }
 
         .curso-info p {
+            margin-bottom: 3px;
+        }
+
+        .certificado-link {
+            display: inline-block;
+            color: #15549a;
+            font-weight: bold;
             margin-top: 5px;
+            font-size: 0.84rem;
         }
 
         .competencias {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 14px;
-        }
-
-        .competencias span {
-            padding: 7px 12px;
-            color: var(--azul);
-            background: #eef4f8;
-            border: 1px solid var(--azul-claro);
-            border-radius: 20px;
-            font-size: 0.92rem;
+            font-size: 0.85rem;
         }
 
         footer {
-            margin-top: 38px;
-            color: #888888;
-            font-size: 0.85rem;
+            margin-top: 25px;
             text-align: center;
+            color: #999;
+            font-size: 0.75rem;
         }
 
         @media (max-width: 700px) {
+
             .curriculo {
-                width: 100%;
                 margin: 0;
-                padding: 30px 22px;
+                padding: 28px 22px;
                 box-shadow: none;
             }
 
             .cabecalho h1 {
-                font-size: 2rem;
-            }
-
-            .cabecalho h2 {
-                font-size: 1rem;
-            }
-
-            .contato,
-            .links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contato span {
-                display: none;
+                font-size: 1.7rem;
             }
 
             .colunas {
                 grid-template-columns: 1fr;
-                gap: 22px;
-            }
-
-            .idiomas {
-                gap: 40px;
+                gap: 18px;
             }
 
             .curso {
@@ -247,26 +208,41 @@
                 align-items: flex-start;
             }
 
-            .certificado {
+            .curso img {
                 width: 100%;
-                max-width: 360px;
+                max-width: 380px;
+            }
+
+            .idiomas {
+                gap: 45px;
+            }
+
+            .contato,
+            .links {
+                line-height: 1.8;
             }
         }
 
         @media print {
+
             body {
-                background: white;
+                background: #fff;
             }
 
             .curriculo {
                 width: 100%;
                 margin: 0;
-                padding: 24px;
+                padding: 25px 35px;
+                box-shadow: none;
+            }
+
+            .curso img:hover {
+                transform: none;
                 box-shadow: none;
             }
 
             a {
-                color: inherit !important;
+                text-decoration: none;
             }
         }
     </style>
@@ -274,223 +250,390 @@
 
 <body>
 
-    <main class="curriculo">
+<main class="curriculo">
 
-        <header class="cabecalho">
-            <h1>Francisco Gonçalves Machado</h1>
+    <header class="cabecalho">
 
-            <h2>Desenvolvedor de Software | Java | Spring Boot</h2>
+        <h1>
+            FRANCISCO GONÇALVES MACHADO
+        </h1>
 
-            <p class="contato">
-                Blumenau, Santa Catarina
-                <span>•</span>
-                <a href="tel:+5547992698522">(47) 99269-8522</a>
-                <span>•</span>
-                <a href="mailto:chicao1125@gmail.com">
-                    chicao1125@gmail.com
-                </a>
-            </p>
+        <h2>
+            DESENVOLVEDOR DE SOFTWARE
+            <span>|</span>
+            JAVA
+            <span>|</span>
+            SPRING BOOT
+        </h2>
 
-            <nav class="links">
-                <a
-                    href="https://github.com/chicao1125cap-lab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
+        <p class="contato">
+            Blumenau, Santa Catarina ·
+            (47) 99269-8522 ·
+            <a href="mailto:chicao1125@gmail.com">
+                chicao1125@gmail.com
+            </a>
+        </p>
 
-                <a
-                    href="https://www.linkedin.com/in/francisco-goncalves/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
+        <p class="links">
 
-                <a
-                    href="https://chicao1125cap-lab.github.io/Portif-lio/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Portfólio
-                </a>
-            </nav>
-        </header>
+            <a
+                href="https://github.com/chicao1125cap-lab"
+                target="_blank"
+            >
+                GitHub
+            </a>
 
-        <section class="secao">
-            <h2>Perfil profissional</h2>
+            ·
 
-            <p>
-                Estudante de Análise e Desenvolvimento de Sistemas, com foco em
-                desenvolvimento de software e backend. Possuo conhecimentos em
-                Java, Spring Boot, SQL e Git.
-            </p>
-        </section>
+            <a
+                href="https://www.linkedin.com/in/francisco-gon%C3%A7alves-535ba633/"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
 
-        <section class="secao">
-            <h2>Objetivo</h2>
+            ·
 
-            <p>
-                Busco uma oportunidade de estágio ou posição júnior para aplicar
-                meus conhecimentos, desenvolver novos aprendizados, evoluir
-                tecnicamente e contribuir com a equipe.
-            </p>
-        </section>
+            <a
+                href="https://chicao1125cap-lab.github.io/Portif-lio/"
+                target="_blank"
+            >
+                Portfólio
+            </a>
 
-        <section class="secao">
-            <h2>Formação acadêmica</h2>
+        </p>
 
-            <article class="item">
-                <h3>
-                    Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS)
-                </h3>
+    </header>
 
-                <p>Senac</p>
 
-                <span>Cursando | Conclusão prevista: 2029</span>
-            </article>
-        </section>
+    <section>
 
-        <section class="secao">
-            <h2>Conhecimentos em tecnologia</h2>
+        <h3>
+            PERFIL PROFISSIONAL
+        </h3>
 
-            <div class="colunas">
-                <div>
-                    <h3>Backend e linguagens</h3>
+        <p>
+            Estudante de Análise e Desenvolvimento de Sistemas,
+            com foco em desenvolvimento de software e backend.
+            Possuo conhecimentos em Java, Spring Boot, SQL e Git.
+        </p>
 
-                    <ul>
-                        <li>Java</li>
-                        <li>Spring Boot</li>
-                        <li>SQL e MySQL</li>
-                        <li>Programação Orientada a Objetos</li>
-                        <li>Arquitetura em Camadas</li>
-                    </ul>
-                </div>
+    </section>
 
-                <div>
-                    <h3>Ferramentas e web</h3>
 
-                    <ul>
-                        <li>Git e GitHub</li>
-                        <li>REST APIs</li>
-                        <li>Postman</li>
-                        <li>HTML5 e CSS3</li>
-                    </ul>
-                </div>
+    <section>
+
+        <h3>
+            OBJETIVO
+        </h3>
+
+        <p>
+            Busco uma oportunidade de estágio ou posição júnior
+            para aplicar meus conhecimentos, desenvolver novos
+            aprendizados, evoluir tecnicamente e contribuir com a equipe.
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h3>
+            FORMAÇÃO ACADÊMICA
+        </h3>
+
+        <p>
+
+            <strong>
+                Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS)
+            </strong>
+
+            — Senac
+
+        </p>
+
+        <small>
+            Cursando | Conclusão prevista: 2029
+        </small>
+
+    </section>
+
+
+    <section>
+
+        <h3>
+            CONHECIMENTOS EM TECNOLOGIA
+        </h3>
+
+        <div class="colunas">
+
+            <div>
+
+                <h4>
+                    Backend e Linguagens
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Java
+                    </li>
+
+                    <li>
+                        Spring Boot
+                    </li>
+
+                    <li>
+                        SQL, MySQL
+                    </li>
+
+                    <li>
+                        Programação Orientada a Objetos
+                    </li>
+
+                    <li>
+                        Arquitetura em Camadas
+                    </li>
+
+                </ul>
+
             </div>
-        </section>
 
-        <section class="secao">
-            <h2>Projetos acadêmicos</h2>
 
-            <article class="projeto">
-                <h3>Veículos OOP — Java</h3>
+            <div>
 
-                <p>
-                    Aplicação desenvolvida em Java com foco em Programação
-                    Orientada a Objetos, utilizando encapsulamento, separação de
-                    responsabilidades e organização do código em diferentes
-                    componentes.
-                </p>
+                <h4>
+                    Ferramentas e Web
+                </h4>
 
-                <p>
-                    Projeto desenvolvido para consolidar fundamentos da
-                    linguagem e boas práticas de desenvolvimento.
-                </p>
-            </article>
+                <ul>
 
-            <article class="projeto">
-                <h3>Projetos de estudo — Spring Boot</h3>
+                    <li>
+                        Git e GitHub
+                    </li>
 
-                <p>
-                    Desenvolvimento de APIs REST utilizando Spring Boot,
-                    trabalhando conceitos de injeção de dependências,
-                    controllers, requisições HTTP, JSON, métodos HTTP e
-                    arquitetura em camadas.
-                </p>
-            </article>
-        </section>
+                    <li>
+                        REST APIs
+                    </li>
 
-        <section class="secao">
-            <h2>Experiência</h2>
+                    <li>
+                        Postman
+                    </li>
 
-            <article class="item">
-                <h3>Serviço Militar — Exército Brasileiro</h3>
+                    <li>
+                        HTML5, CSS3
+                    </li>
 
-                <p>
-                    Experiência em ambiente profissional, com atuação em rotinas
-                    que exigem responsabilidade, organização, cumprimento de
-                    procedimentos, trabalho em equipe e comprometimento.
-                </p>
-            </article>
-        </section>
+                </ul>
 
-        <section class="secao">
-            <h2>Idiomas</h2>
-
-            <div class="idiomas">
-                <div>
-                    <h3>Português</h3>
-                    <span>Nativo</span>
-                </div>
-
-                <div>
-                    <h3>Inglês</h3>
-                    <span>Intermediário</span>
-                </div>
             </div>
-        </section>
 
-        <section class="secao">
-            <h2>Cursos e qualificações</h2>
+        </div>
 
-            <article class="curso">
+    </section>
 
-                <!--
-                    Se você tiver a imagem do certificado, salve-a na mesma
-                    pasta deste index.html com o nome: certificado-ia.png.
-                    Caso não queira usar imagem, apague a div "certificado".
-                -->
-                <div class="certificado">
-                    <img
-                        src="certificado-ia.png"
-                        alt="Certificado do curso Regras da Inteligência Artificial"
-                    >
-                </div>
 
-                <div class="curso-info">
-                    <h3>
-                        Regras da Inteligência Artificial:
-                        como usá-la sem correr riscos legais
-                    </h3>
+    <section>
 
-                    <p>
-                        Santander Open Academy — concluído em agosto de 2026
-                    </p>
+        <h3>
+            PROJETOS ACADÊMICOS
+        </h3>
 
-                    <span>Carga horária: 8 horas | 2 módulos</span>
-                </div>
-            </article>
-        </section>
+        <p>
 
-        <section class="secao">
-            <h2>Competências</h2>
+            <strong>
+                Veículos OOP — Java:
+            </strong>
 
-            <div class="competencias">
-                <span>Responsabilidade</span>
-                <span>Organização</span>
-                <span>Trabalho em equipe</span>
-                <span>Cumprimento de procedimentos</span>
-                <span>Comprometimento</span>
+            aplicação desenvolvida em Java com foco em Programação
+            Orientada a Objetos, utilizando encapsulamento,
+            separação de responsabilidades e organização do código
+            em diferentes componentes. Projeto desenvolvido para
+            consolidar fundamentos da linguagem e boas práticas
+            de desenvolvimento.
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Projetos de estudo — Spring Boot:
+            </strong>
+
+            desenvolvimento de APIs REST utilizando Spring Boot,
+            trabalhando conceitos de injeção de dependências,
+            controllers, requisições HTTP, JSON, métodos HTTP
+            e arquitetura em camadas.
+
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h3>
+            EXPERIÊNCIA
+        </h3>
+
+        <p>
+
+            <strong>
+                Serviço Militar — Exército Brasileiro:
+            </strong>
+
+            experiência em ambiente profissional, com atuação em
+            rotinas que exigem responsabilidade, organização,
+            cumprimento de procedimentos, trabalho em equipe
+            e comprometimento.
+
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h3>
+            IDIOMAS
+        </h3>
+
+        <div class="idiomas">
+
+            <div>
+
+                <strong>
+                    Português
+                </strong>
+
+                <small>
+                    Nativo
+                </small>
+
             </div>
-        </section>
 
-        <footer>
-            Currículo profissional — Francisco Gonçalves Machado
-        </footer>
 
-    </main>
+            <div>
+
+                <strong>
+                    Inglês
+                </strong>
+
+                <small>
+                    Intermediário
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h3>
+            CURSOS E QUALIFICAÇÕES
+        </h3>
+
+        <p>
+
+            <strong>
+                Regras da Inteligência Artificial:
+                como usá-la sem correr riscos legais
+            </strong>
+
+            — Santander Open Academy (ago/2026, 8h)
+
+        </p>
+
+
+        <div class="curso">
+
+            <a
+                href="assets/certificado.png"
+                target="_blank"
+            >
+
+                <img
+                    src="assets/certificado.png"
+                    alt="Certificado do curso Regras da Inteligência Artificial"
+                >
+
+            </a>
+
+
+            <div class="curso-info">
+
+                <strong>
+                    Regras da Inteligência Artificial:
+                    como usá-la sem correr riscos legais
+                </strong>
+
+                <p>
+                    Santander Open Academy —
+                    concluído em agosto/2026
+                </p>
+
+                <p>
+                    Carga horária: 8h · 2 módulos
+                </p>
+
+                <a
+                    class="certificado-link"
+                    href="assets/certificado.png"
+                    target="_blank"
+                >
+                    Visualizar certificado
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h3>
+            COMPETÊNCIAS
+        </h3>
+
+        <p class="competencias">
+
+            Responsabilidade
+
+            <span>|</span>
+
+            Organização
+
+            <span>|</span>
+
+            Trabalho em equipe
+
+            <span>|</span>
+
+            Cumprimento de procedimentos
+
+            <span>|</span>
+
+            Comprometimento
+
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        Currículo profissional —
+        Francisco Gonçalves Machado
+
+    </footer>
+
+</main>
 
 </body>
 </html>
